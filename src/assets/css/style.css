@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'Poppins_Regular';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    src: url(../fonts/Poppins-Regular.ttf) format('woff2');
+}
+@font-face {
+    font-family: 'Poppins_semi';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    src: url(../fonts/Poppins-SemiBold.ttf) format('woff2');
+}
+@font-face {
+    font-family: 'Poppins_blod';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../fonts/Poppins-Bold.ttf) format('woff2');
+
+}
+/*Global css start*/
+html body{
+    font-family: 'Poppins_Regular';
+    background: #fbfbfb;
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Poppins_semi';
+}
+body a {
+    color: #000000;
+}
+body a:hover,.primary_color{
+    color:#adefd1;  
+}
+.primary_back{
+    background: #adefd1;
+}
+.about_section,.portfolio_section,.skills_section{
+    background: #fff;
+}
+.heading{
+    font-size: 3.5rem;
+}
+ul.header_socail li,.work_expri li {
+    list-style: none;
+}
+.back_white,.single-detail-item,a.list_skill{
+    -webkit-box-shadow: 0px 10px 26px 0px rgb(0 0 0 / 14%);
+    box-shadow:0px 10px 26px 0px rgb(0 0 0 / 14%);
+}
+/*Header section*/
+.sitelogo a{
+    font-size: 2.5em;
+    font-family: 'Poppins_blod';
+    color:#00203f;
+}
+.sitelogo a:hover,a.primary_back:hover,ul.header_socail li a i{
+    text-decoration: none;
+}
+.stick_header{
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-animation: slide-down 1s;
+    animation: slide-down 1s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    background: #00203f;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
+}
+@keyframes slide-down {
+	0% {
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+}
+.stick_header .sitelogo a,.stick_header a.nav-link:hover{
+    color: #adefd1;
+}
+.stick_header .text-right a{
+    color:#adefd1;
+}
+/*Introduction section*/
+h1{
+    font-family: 'Poppins_blod'; 
+}
+.pro_font{
+    color:#747474;
+}
+a.primary_back{
+    color:#00203f;
+    font-family: 'Poppins_Regular';
+    font-size: 20px;
+}
+a.primary_back:hover{
+    color:rgb(173 239 209);
+}
+.icon-long-arrow-right:before{
+    transform: translateY(3px);
+    font-size: 27px;
+}
+.primary_back:hover{
+    background: #00203f; 
+    transition: all 0.5s ease;   
+}
+
+ul.header_socail li a {
+    background: white;
+    padding: 21px 28px;
+    box-shadow: 1px 1px 17px 2px #e9e9e9;
+    border-radius: 7px;
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin: 8px 1px 20px 0;
+}
+ul.header_socail li a i{
+    font-size: 25px;
+}
+/*About Us Section*/
+.image_about img {
+    border-radius: 25px;
+}
+.sub_title{
+    font-weight: 600;
+}
+ul.work_expri li {
+    float: left;
+    width:30%;
+    text-align: center;
+    background: #fbfbfb;
+    margin-right: 16px;
+    margin-top: 21px;
+    padding: 12px;
+}
+ul.work_expri li:hover{
+    box-shadow: 1px 1px 17px 2px #eeeeee;
+    transition: all 0.5s ease;
+}
+.work_expri h5{
+    font-family: 'Poppins_semi';
+    font-weight: 500;
+}
+
+/*Services Section*/
+
+.list_services h4{
+    font-weight: 500;
+}
+/*Footer*/
+footer{
+    background: #00203f;
+ }
+/*media query*/
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1200px !important;
+    }
+    .sitelogo{
+        width: 20%;
+        float: left;   
+    }
+    .menusbar{
+        width: 80%;
+        float: left;
+    }
+}
+@media (max-width: 1024px){
+    .services_section h4{
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 768px){
+  
+    ul.header_socail li a{
+        width: 79%;
+    }
+    h1,h2{
+        font-size: 32px;
+    }
+    .sharing_menu{
+        order: 1;
+    }
+    .owner_imag{
+        order: 2;
+    }
+    .introduction{
+        order: 3;
+    }
+    nav.navbar{
+        position: fixed;
+        z-index: 111;
+        background:#00203f;
+        bottom: 0;
+    }
+    .menusbar {
+        position: absolute;
+        bottom: 3.2rem;
+        background: #adefd1;
+        width: 100%;
+        left: 0px;
+        right: 0;
+        -webkit-animation: slide 0.5s;
+        animation: slide 0.5s;
+
+    }
+    @keyframes slide {
+        0% { bottom: 1.8rem; }
+    }
+    
+    
+    ul.nav_menu{
+        padding: 0;
+    }
+    ul.nav_menu li{
+        display: grid;
+        margin: auto;
+        width: 48%;
+        float: left;
+        text-align: center;
+    }
+    .sitelogo a,.toggle_menu{
+       color: #adefd1;
+       font-size: 1.5em;
+    }
+    .toggle_menu{
+        cursor: pointer;
+    }
+    footer{
+        margin-bottom: 50px;
+    }
+    ul.nav_menu li i{
+        font-size: 20px !important;
+    }
+}
+@media (max-width: 600px){
+    body  h1,h2{
+        font-size: 32px;
+    }
+    .heading{
+        font-size: 2.5rem;
+    }
+    ul.header_socail li a{
+        padding: 12px 15px;
+        width: 100%;
+    }
+    ul.nav_menu li{
+        width: 50%;  
+    }
+    ul.work_expri li{
+        width: 100%;
+    }
+    ul.nav_menu .list-inline-item{
+        margin-right: 0rem;
+    }
+    .about_section .downl_resume,.contact_form .theme-btn{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (min-width: 500px) and (max-width: 770px){
+    header .container{
+        max-width: 100%;
+    }
+    nav.navbar{
+        padding: 10px 40px;
+    }
+    .menusbar{
+        bottom: 3.4rem;
+    }
+    ul.nav_menu li{
+        width: 29%;
+    }
+}
+.nav_menu li i{
+    font: normal normal normal 14px/1 FontAwesome;  
+}
+.fa-user:before {
+  content: "\f007";
+}
+.fa-briefcase:before {
+  content: "\f0b1";
+}
+.fa-phone:before {
+  content: "\f095";
+}
+.fa-file-text-o:before {
+  content: "\f0f6";
+}
+.fa-gear:before, .fa-cog:before {
+  content: "\f013";
+}
+.fa-comments:before {
+  content: "\f086";
+}
